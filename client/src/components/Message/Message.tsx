@@ -12,11 +12,11 @@ const Message = ({message, own} : {message: any, own: boolean}) => {
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7-d5qr9WzS926jiHDPlYrCL01Eb0M8C8c4w&usqp=CAU"
           alt=""
         />
-        <p className={`${own ? `bg-blue-400 ` : "bg-gray-200 "}` +  `max-w-[300px] rounded-3xl px-2 py-3`}>
+        <p className={`${own ? `bg-blue-400 ` : "bg-gray-200 "}` +  `max-w-[300px] rounded-xl p-2`}>
           {message.text}
         </p>
       </div>
-      <span>{format(message.createdAt)}</span>
+      <span className="text-[12px] text-gray-500">{format(message.createdAt)}</span>
     </div>
   );
 };

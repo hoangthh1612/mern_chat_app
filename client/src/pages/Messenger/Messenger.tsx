@@ -129,7 +129,7 @@ const Messenger = () => {
       <div className="flex h-[calc(100vh-50px)]">
         <div className="flex-[3] p-2 border-r-[1px] overflow-y-scroll">
           {conversations?.map((c: any, index) => (
-            <div className={`mb-3 ${currentChat?._id === c?._id && ` bg-gray-200`}`} onClick={() => setCurrentChat(c)} key={index}>
+            <div className={`mb-3 py-1 px-2 rounded-xl ${currentChat?._id === c?._id && ` bg-gray-200`}`} onClick={() => setCurrentChat(c)} key={index}>
               <Conversation 
                 conversation={c} 
                 currentUser={user} 
@@ -140,7 +140,7 @@ const Messenger = () => {
         </div>
 
         <div className="flex-[7]">
-          <div className="flex flex-col justify-between h-full relative">
+          <div className="flex flex-col justify-between h-[95%] relative">
           {currentChat ? (
             <>
               <div className="bg-slate-100 min-h-[50px] p-2">

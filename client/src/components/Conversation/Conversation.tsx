@@ -34,7 +34,7 @@ const Conversation = ({ conversation, currentUser }: PropsType) => {
     
   
     return (
-    <div className="flex items-center cursor-pointer">
+    <div className="flex items-center cursor-pointer ">
       <img
         className="h-[30px] w-[30px] rounded-[50%]"
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7-d5qr9WzS926jiHDPlYrCL01Eb0M8C8c4w&usqp=CAU"

@@ -3,14 +3,14 @@ const bcrypt = require('bcrypt');
 
 
 const userRegister = async (req, res) => {
-    const {username, email, password} = req.body;
+    const {username, email, password, profilePicture} = req.body;
     const existedUser = await userModel.findOne({email});
     if(existedUser) res.status(400).json("User already existed");
     
     const salt = await bcrypt.genSalt(10);
     const hashedPass = await bcrypt.hash(password, salt);
 
-    const newUser = new userModel({username, email, password: hashedPass});  
+    const newUser = new userModel({ profilePicture ,username, email, password: hashedPass});  
     try {
         await newUser.save();
         res.status(201).json(newUser);
